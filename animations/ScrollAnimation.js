@@ -108,7 +108,7 @@ export default class ScrollAnimation extends React.Component {
     })
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setState({rotationAnimation : this.setRotateAnimation()});
   }
 
@@ -121,7 +121,7 @@ export default class ScrollAnimation extends React.Component {
     }
   }
 
-  componentWillReceiveProps(props){
+  UNSAFE_componentWillReceiveProps(props){
     if(props.isRefreshing != this.state.isRefreshing){
       this.setState({isRefreshing: props.isRefreshing});
       if(this.props.shouldHideDuringRefresh){
